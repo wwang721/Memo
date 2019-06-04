@@ -3,10 +3,10 @@
 [toc]
 
 ----------------------
-##初识Xcode
+## 初识Xcode
 作为Mac上相对来说最好的IDE，我觉得还是有必要学习一下的。
 
-## 新建C++项目
+##新建C++项目
 1. 欢迎界面:`Create a new Xcode project`-->`macOS`-->`Command Line Tool`。
 
 2. `Product Name`和其他几行随便填，`Language`选`C++`。
@@ -25,9 +25,9 @@
 ## Xcode与GitHub
 * 在安装配置完`git`后，我们可以在Xcode的`Preference`-->`Accounts`中添加GitHub账户，随后我们就可以通过菜单栏上的`Source Control`-->`Clone`下载自己在GitHub上托管的代码了。
 
-* 有时clone下来的代码里没有Xcode的工程文件`.xcodeproj`,我们需要新建一个Project，然后在左侧文件目录的最左下方有一个`+`号，点击添加文件，把clone下来的文件夹添加到工程中，就可以直接在`Source Control`里 git commit 和 git push 到 GitHub 上了。
+* 有时 git clone 下来的代码里没有Xcode的工程文件`.xcodeproj`,我们需要新建一个工程项目Project(**新建Project时取消勾选`Create Git repository on my Mac`**)，然后在左侧文件目录里删除初始文件夹，关闭Xcode项目窗口，将clone下来的文件夹拖至Project文件夹中，然后重新点开工程文件`.xcodeproj`，**右击**左侧文件目录最上方的**工程文件**或者点击最左下方的`+`号，选择`Add files to "PROJECTNAME"...`，弹出窗口中的`Added folders:`后选`Create groups`(一般默认就是这个)，添加完成后就可以直接在`Source Control`里 git commit 和 git push 到 GitHub 上了。
 
-* 如果是一个新的Project想传到GitHub上去，可以点击左侧文件目录上方的第二个小图标`Show the Source Control navigator`, 然后**右键**第一个项目文件夹 --> `Creat "PROJECTNAME" remote...`就会弹出一个类似 GitHub 新建 Repository 的窗口，填完就会自动在 GitHub 创建对应的 Repository，以后也可以直接在菜单栏`Source Control`里 git commit 和 git push 了。
+* 如果是一个新的Project想传到GitHub上去，可以点击左侧文件目录上方的**第二个小图标`Show the Source Control navigator`**, 会显示 git 的相关信息，包括**Branch**、**Tags**以及**Remotes**, 然后**右键**第一个项目文件夹 --> `Creat "PROJECTNAME" remote...`就会弹出一个类似 GitHub 新建 Repository 的窗口，填完就会自动在 GitHub 创建对应的 Repository，以后也可以直接在菜单栏`Source Control`里 git commit 和 git push 了。
 
 ## Xcode下Python环境的搭建
 1. 欢迎界面:`Create a new Xcode project`-->`Cross-platform`-->`External Build System`。
