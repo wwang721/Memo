@@ -1,12 +1,13 @@
 # Xcode笔记
 
+----------------------
 [toc]
 
 ----------------------
 ## 初识Xcode
 作为Mac上相对来说最好的IDE，我觉得还是有必要学习一下的。
 
-##新建C++项目
+## 新建C++项目
 1. 欢迎界面:`Create a new Xcode project`-->`macOS`-->`Command Line Tool`。
 
 2. `Product Name`和其他几行随便填，`Language`选`C++`。

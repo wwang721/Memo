@@ -1,27 +1,27 @@
-#MARKDOWN README
+# MARKDOWN README
 This text talks about the basic syntax of **Markdown**.
 
 [TOC]
 
 <!--To display the contents-->
 
-##TABLE OF CONTENTS
+## TABLE OF CONTENTS
 **Markdown** can generate Contents automatically by`[TOC]`or`[toc]` token based on you titles after `#` token.
 
 Note: You have to add a blank line after the `[TOC]` token, and click the `Preference > Rendering > Detect table of contents token` choice in **MacDown** app.
 
-##INTRODUCTION
+## INTRODUCTION
 **Markdown** is one of the most popular languages for making notes and the markdown file usually end up with ```.md```. 
 
-##TITLES
+## TITLES
 **Markdown** use `#` to represent titles.
 
 The line above `================` (equals `#`) or `-----------------` (equals `##`) is also title.
 
 
-##SYMBOLS
+## SYMBOLS
 
-###Inline Formating
+### Inline Formating
 1. `*Italy*` is *Italy*.
 2. `**Bold**` is **Bold**.
 3. `***Italy and Bold***` is ***Italy and Bold***.
@@ -33,7 +33,7 @@ The line above `================` (equals `#`) or `-----------------` (equals `#
 7. `*********`,`_______` or `----------` will be a line, like 
 **********
 
-###Lists
+### Lists
 1. Ordered list.
 
 	> 1. First.
@@ -50,14 +50,14 @@ The line above `================` (equals `#`) or `-----------------` (equals `#
 
 `Note: There is a blank space behind the List symbol *, + and -.`
 
-##Mathematics
+## Mathematics
 **Markdown** supports ***LATEX*** math expressions with Internet connection.
 We usually use symbol `$` like `$\int_0^\infty f(x)\mathrm{d}x$`, then we will get
 >$\int_0^\infty f(x)\mathrm{d}x$
 .
 
 
-##Code Blocks
+## Code Blocks
 As we know, **Markdown** always quotes code blocks, we can add `tab` in the front of every line to declere that this part is a code block. Or we can use \` \` \` to bracket the code block and add the language name behind the first \` \` \`(Note:there is a space blank between the first \` \` \` and specific language name).
 
 
@@ -82,11 +82,11 @@ if the code language is not specific, we can just ignore it or we can use `tab`:
 	import numpy as np
 	print('Hellow, world!')
 
-##Comments
+## Comments
 `<!--COMMENTS-->` is the expression used in HTML, so it is not recommended in **Markdown**.
 <!--my comments-->
 
-##Hypertext
+## Hypertext
 1. `[Name](address "capital")` is
 [Physics Review Letter](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.109.096603 "Shufeng Zhang").
 
