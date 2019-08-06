@@ -58,7 +58,7 @@ We usually use symbol `$` like `$\int_0^\infty f(x)\mathrm{d}x$`, then we will g
 
 
 ## Code Blocks
-As we know, **Markdown** always quotes code blocks, we can add `tab` in the front of every line to declere that this part is a code block. Or we can use \` \` \` to bracket the code block and add the language name behind the first \` \` \`(Note:there is a space blank between the first \` \` \` and specific language name).
+As we know, **Markdown** always quotes code blocks, we can add `tab` in the front of every line to declare that this part is a code block. Or we can use \` \` \` to bracket the code block and add the language name behind the first \` \` \`(Note:there is a space blank between the first \` \` \` and specific language name).
 
 
 ``` cpp
