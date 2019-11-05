@@ -5,6 +5,7 @@
 %\usepackage{ctex}%add Chinese supports
 \usepackage{upgreek}%add special greek symbols
 \usepackage{graphicx}%include figure files
+\usepackage{tikz}
 \usepackage{wrapfig}
 %\usepackage{subfigure}
 \usepackage{amsmath}%add special math symbols
@@ -415,7 +416,7 @@ similarly, $\psi(x)=Fe^{-\kappa x}~(x>0)$
 \]
 Integrating Schr\"odinger equation:
 \[
-	=\frac{\hbar^2}{2m}\int_{-\varepsilon}^{\varepsilon}\frac{\partial^2\psi}{\partial x^2}{\rm d}x+\int_{-\varepsilon}^{\varepsilon}V(x)\psi{\rm d}x=E\int_{-\varepsilon}^{\varepsilon}\psi{\rm d}x,
+	-\frac{\hbar^2}{2m}\int_{-\varepsilon}^{\varepsilon}\frac{\partial^2\psi}{\partial x^2}{\rm d}x+\int_{-\varepsilon}^{\varepsilon}V(x)\psi{\rm d}x=E\int_{-\varepsilon}^{\varepsilon}\psi{\rm d}x,
 \]
 when $\varepsilon\rightarrow0$, $\displaystyle\int_{-\varepsilon}^\varepsilon\frac{\partial^2\psi}{\partial x^2}{\rm d}x=\Delta\left(\frac{\partial\psi}{\partial x}\right)$ and $\displaystyle\int_{-\varepsilon}^\varepsilon\psi{\rm d}x=0$,
 therefore,
@@ -1103,7 +1104,7 @@ after making a appropriate correction, it becomes:
 \]
 The total angular momentum $\vec{J}=\vec{L}+\vec{S}$. The Hamiltanion no longer commutes with $\vec{L}$ and $\vec{S}$, $H'_{\rm so}$ does commutes with $L^2$, $S^2$ and $\vec{J}$, and 
 \[
-	\vec{L}\cdot\vec{S}=\frac{1}{2}(J^2-L^2-S^2)=\frac{\hbar}{2}[j(j+1)-l(l+1)-s(s+1)].
+	\vec{L}\cdot\vec{S}=\frac{1}{2}(J^2-L^2-S^2)=\frac{\hbar^2}{2}[j(j+1)-l(l+1)-s(s+1)].
 \]
 
 \subsubsection{Zeeman Effect}
@@ -1120,9 +1121,18 @@ where $\vec{\mu}_l=-\dfrac{e}{2m}\vec{L}$ is the dipole momentum associated with
 \]
 
 \begin{wrapfigure}{r}{.4\textwidth}
-\hspace{1cm}
-\includegraphics[width=.3\textwidth]{fig1.eps}
-\vspace{-0.5cm}
+\hspace{0.8cm}
+\begin{tikzpicture}[scale=0.9]
+	\coordinate (A) at (-6,-4);
+	\coordinate (B) at (0,2);
+	\coordinate (C) at (-1,-2.5);
+	\draw[thick, -stealth] (A)--(B);
+	\draw[thick, -stealth] (A)--(C);
+	\draw[thick, -stealth] (C)--(B);
+	\node at (-3,0) {$\vec{J}$};
+	\node at (-3,-3.5) {$\vec{L}$};
+	\node at (-0.2,-0.8) {$\vec{S}$};
+\end{tikzpicture}
 \caption{$\vec{J}=\vec{L}+\vec{S}$ is a constant.}
 \label{fg:1}
 \end{wrapfigure}
