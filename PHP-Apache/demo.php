@@ -62,9 +62,9 @@ define('TB_NAME', 'table_users');	// 数据表名称
 $con = mysqli_connect(DB_HOST,DB_USER,DB_PWD) or die('mySQL 连接失败, 错误信息: '.mysqli_error());
 
 if($con) {
-	echo 'link successfully!</br></br>';
+	echo 'Link successfully!</br></br>';
 }else {
-	echo 'error!</br></br>';
+	echo 'Error!</br></br>';
 }
 
 echo "用户名: ", DB_USER, "</br>";
@@ -72,7 +72,7 @@ echo "用户名: ", DB_USER, "</br>";
 // 选择数据库
 mysqli_select_db($con, DB_NAME) or die('数据库连接错误，错误信息：'.mysqli_error());
 
-echo "选择数据库: use ", DB_NAME, "; MySQL--> database changed ...</br></br>";
+echo "选择数据库: USE ", DB_NAME, "; MySQL --> Database changed ...</br></br>";
 
 
 $query = "SELECT * FROM " . TB_NAME;
