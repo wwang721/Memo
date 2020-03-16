@@ -19,6 +19,7 @@ anchorcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}% add hypertext capabi
 \usepackage{geometry}
 \geometry{a4paper, centering, scale=0.8}
 
+\usepackage{ntheorem}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 %\fancyhead[CE]{}
@@ -27,6 +28,9 @@ anchorcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}% add hypertext capabi
 %\fancyhead[LE]{\thepage} 
 %\fancyhead[LO]{\leftmark}
 %\fancyhead[RE]{\leftmark}
+
+\newtheorem*{thm}{Theorem}
+\newtheorem*{proof}{Proof}
 
 \lhead{}
 \chead{}
@@ -637,7 +641,7 @@ Momentum space wave function:
 	\Psi(x,t)&=&\int c(p)f_p{\rm d}p=\frac{1}{\sqrt{2\pi\hbar}}\int e^{ipx/\hbar}\Phi(p,t){\rm d}p.
 \end{eqnarray*}
 
-\subsection{The Uncertainty Principle}
+\subsection{The Uncertainty Principle}\label{subsec:3.5}
 1. $\sigma_A^2=\braket{(\hat{A}-\braket{A})\psi|(\hat{A}-\braket{A})\Psi}=\braket{f|f}$, similarly $\sigma_B^2=\braket{g|g}$, where $g=\hat{B}-\braket{B}$. For Schwarz inequality:
 \[
 	\sigma_A^2\sigma_B^2=\braket{f|f}\braket{g|g}\geqslant|\braket{f|g}|^2,
@@ -687,12 +691,12 @@ Define
 \[
 	c=\Phi(p,t)=\braket{p|\Im(t)}.
 \]\\
-(3) If $\hat{H}=\hat{H}$, and $\ket{f}=\ket{n}$, then
+(3) If $\hat{Q}=\hat{H}$, and $\ket{f}=\ket{n}$, then
 \[
 	c_n=\braket{n|\Im(t)}.
 \]
 
-\noindent 2. Operators (representint Observables) are linear transformations:
+\noindent 2. Operators (represent Observables) are linear transformations:
 \[
 	\ket{\beta}=\hat{Q}\ket{\alpha},
 \]
@@ -725,6 +729,45 @@ for $\sum_n \ket{e_n}\braket{e_n|\beta}=\ket{\beta}$.
 \begin{equation}\label{eq:17}
 	[AB,C]=A[B,C]+[A,C]B.
 \end{equation}
+
+\newpage
+
+\subsection{Physical Significance of Commutators}
+
+\begin{thm}
+	If operator $\hat{H}$ and $\hat{Q}$ share a complete set of eigenfunctions, then these two operators commute with each other.
+\end{thm}
+\begin{proof}
+	If the two operators share a complete set of eigenfunctions $\{\phi_n\}$,
+	$$\hat{H}\phi_n=E_n\phi_n,~\textit{and}~\hat{Q}\phi_n=q_n\phi_n,$$
+we can get 
+	$$[\hat{H},\hat{Q}]\phi_n=\hat{H}\hat{Q}\phi_n-\hat{Q}\hat{H}\phi_n=E_nq_n\phi_n-q_nE_n\phi_n=0.$$
+As $\{\phi_n\}$ are complete, i.e., $\forall\varPhi\in$ Hilbert Space $L_2(a,b)$, $\exists c_n$ satisfy $\varPhi=\sum c_n\phi_n$, we can get
+	$$[\hat{H},\hat{Q}]\varPhi_n=\sum c_n[\hat{H},\hat{Q}]\phi_n=0.$$
+	So the two operators commute with each other.\hfill$\square$
+
+\end{proof}
+
+\begin{thm}[converse]
+	If two operators commute with each other, i.e, $[\hat{H}, \hat{Q}]=0$, operator $\hat{H}$ and $\hat{Q}$ share a complete set of eigenfunctions.
+\end{thm}
+\begin{proof}
+	If ${\phi_n}$ is a complete set of eigenfunctions of operator $\hat{H}$ (nondegenerate), namely,
+	$$\hat{H}\phi_n=E_n\phi_n,$$
+	and if $[\hat{H},\hat{Q}]=0$, we can get
+	$$\hat{H}\hat{Q}\phi_n-\hat{Q}\hat{H}\phi_n=0\Rightarrow\hat{H}\hat{Q}\phi_n=E_n\hat{Q}\phi_n.$$
+	So $\hat{Q}\phi_n$ is also an eigenfunction of operator $\hat{H}$ corresponding to the same eigenvalue $E_n$, which means $\hat{Q}\phi_n$ and $\phi_n$ differ only by a constant, i.e.,
+	$$\hat{Q}\phi_n=c_n\phi_n.$$
+	So $\{\phi_n\}$ are also the eigenfunctions of operator $\hat{Q}$. And we can get the similar results for degenerate cases.\hfill$\square$
+\end{proof}
+
+\noindent{\bf Conclusion}:
+~\\
+
+$[\hat{H},\hat{Q}]=0$ is the {\bf Necessary and Sufficient Condition} of that operator $\hat{H}$ and $\hat{Q}$ share a complete set of eigenfunctions.
+~\\
+
+$[\hat{H},\hat{Q}]=0$ means these two observables can {\bf be measured simultaneously}, or in another word, these two observables can {\bf have determinate values at the same time}. (cf. section \ref{subsec:3.5} The Uncertainty Principle).
 
 \newpage
 
@@ -1088,7 +1131,7 @@ where $I=\dfrac{e}{T}$, $L=rp=rm\dfrac{2\pi r}{T}=\dfrac{2\pi m r^2}{T}$. Theref
 \[
 	\vec{B}=\frac{1}{4\pi\varepsilon_0}\cdot\frac{e}{mc^2r^3}\vec{L}.
 \]
-(2) The magnetic dipole momentum:
+(2) The magnetic dipole moment:
 \[
 	\mu=I\cdot\pi r^2, ~I=\frac{q}{T},~S=\frac{2\pi m r^2}{T},
 \]
